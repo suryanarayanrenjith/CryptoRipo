@@ -1,5 +1,7 @@
 # CryptoRipo
 
+<img src="/assets/logo.jpg?raw=true" width="100" align="right">
+
 Welcome to **CryptoRipo**, a decentralized platform where developers can upload, buy, and sell code projects using cryptocurrency. Whether you're a developer looking to monetize your work or a buyer searching for high-quality code, CryptoRipo offers a secure and easy-to-use environment to connect, trade, and collaborate.
 
 ## Table of Contents
