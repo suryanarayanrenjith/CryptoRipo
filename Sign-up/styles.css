@@ -1,0 +1,131 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sign-up-box {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.3);
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.sign-up-header h1 {
+    color: #00ff99;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.sign-up-header p {
+    color: #ccc;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+#sign-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sign-up-form label {
+    text-align: left;
+    font-size: 14px;
+    color: #ccc;
+}
+
+#sign-up-form input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#sign-up-form input:focus {
+    border-color: #00ff99;
+    outline: none;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-password {
+    color: #00ff99;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #00cc7a;
+}
+
+.sign-up-button {
+    background-color: #00ff99;
+    color: #000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sign-up-button:hover {
+    background-color: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.sign-in-prompt {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.sign-in-link {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sign-in-link:hover {
+    color: #00cc7a;
+}

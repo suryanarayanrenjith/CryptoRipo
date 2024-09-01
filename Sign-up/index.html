@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CryptoRipo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <script defer src="matrix.js"></script>
+</head>
+
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    <div class="container">
+        <div class="sign-up-box">
+            <div class="sign-up-header">
+                <h1>CryptoRipo</h1>
+                <p>Please sign up</p>
+            </div>
+        
+            <form id="sign-up-form" action="signup.php" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="enter-password">Re-Enter Password:</label>
+                <input type="password" id="re-password" name="enter-password" required>
+
+                <div class="actions">
+                    <button type="submit" class="sign-up-button">Sign Up</button>
+                </div>
+            </form>
+
+            <div class="sign-in-prompt">
+                <p>Already have an account? <a href="/Sign-in/" class="sign-in-link">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

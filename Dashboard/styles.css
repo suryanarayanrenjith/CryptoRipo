@@ -1,0 +1,595 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: #00ff99;
+    transition: all 0.3s ease;
+}
+
+.search-container {
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#searchBar {
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #444;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 16px;
+}
+
+.profile {
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
+    position: relative;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.profile-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    width: 200px;
+}
+
+.profile-menu a {
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.profile-menu a:hover {
+    background-color: #00ff99;
+    color: #000;
+}
+
+nav {
+    width: 250px;
+    height: 100%;
+    background-color: #121212;
+    position: fixed;
+    top: 60px;
+    left: -250px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: #00ff99;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00ff99;
+    color: #000;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 60px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.dashboard {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+}
+
+h1 {
+    color: #00ff99;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.code-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.code-item {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+    width: calc(33.333% - 20px);
+    text-align: center;
+}
+
+.code-item h2 {
+    color: #00ff99;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.code-item p {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.buy-now {
+    background-color: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.profile-content {
+    margin-left: 250px;
+    display: none;
+}
+
+.profile-content h1 {
+    color: #00ff99;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.profile-content p {
+    color: #ddd;
+    font-size: 18px;
+}
+
+.profile-details p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.profile-picture {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+}
+
+.profile-picture button {
+    background-color: #00ff99;
+    color: #000;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.profile-picture button:hover {
+    background-color: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.edit-info {
+    margin: 20px 0;
+}
+
+.edit-info button {
+    background-color: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.edit-info button:hover {
+    background-color: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.profile-actions h2, .account-management h2 {
+    font-size: 22px;
+    color: #00ff99;
+    margin-bottom: 15px;
+}
+
+.profile-actions button,
+.account-management button {
+    background-color: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.profile-actions button:hover,
+.account-management button:hover {
+    background-color: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.account-management button {
+    width: 100%;
+}
+
+.account-management button:first-of-type {
+    background-color: #ff4c4c;
+}
+
+.account-management button:first-of-type:hover {
+    background-color: #e63939;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #00ff99;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.theme-settings {
+    margin-top: 20px;
+}
+
+.theme-settings h2 {
+    font-size: 22px;
+    color: #00ff99;
+    margin-bottom: 15px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#themeLabel {
+    font-size: 18px;
+    color: #ddd;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light-mode header {
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode nav {
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .profile-content,
+body.light-mode .profile-details p,
+body.light-mode .profile-actions h2,
+body.light-mode .account-management h2,
+body.light-mode #themeLabel,
+body.light-mode .profile-actions button,
+body.light-mode .account-management button,
+body.light-mode .profile-logout button,
+body.light-mode .profile-picture button,
+body.light-mode .profile-menu a {
+    color: #000;
+}
+
+body.light-mode .profile-actions button,
+body.light-mode .account-management button,
+body.light-mode .profile-logout button,
+body.light-mode .profile-picture button {
+    background-color: #00cc7a;
+    color: #ffffff;
+}
+
+body.light-mode .profile-actions button:hover,
+body.light-mode .account-management button:hover,
+body.light-mode .profile-logout button:hover,
+body.light-mode .profile-picture button:hover {
+    background-color: #00ff99;
+    color: #000;
+}
+
+body.light-mode .profile-menu {
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .code-item {
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .code-item h2 {
+    color: #00cc7a;
+}
+
+body.light-mode .code-item p {
+    color: #333;
+}
+
+.wallet-balance, .wallet-purchase {
+    margin-bottom: 30px;
+}
+
+.wallet-balance h2, .wallet-purchase h2 {
+    color: #00cc7a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.wallet-balance ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.wallet-balance ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.wallet-balance ul li strong {
+    color: #00ff99;
+}
+
+.wallet-purchase form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wallet-purchase label {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.wallet-purchase select, .wallet-purchase input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 16px;
+}
+
+.wallet-purchase button {
+    background-color: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.wallet-purchase button:hover {
+    background-color: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.transaction-result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+}
+
+.transaction-result h2 {
+    color: #00cc7a;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.transaction-result p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.wallet-balance, .wallet-purchase, .wallet-linking {
+    margin-bottom: 30px;
+}
+
+.wallet-balance h2, .wallet-purchase h2, .wallet-linking h2 {
+    color: #00cc7a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.wallet-balance ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.wallet-balance ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.wallet-balance ul li strong {
+    color: #00ff99;
+}
+
+.wallet-linking form, .wallet-purchase form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wallet-linking label, .wallet-purchase label {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.wallet-linking select, .wallet-linking input,
+.wallet-purchase select, .wallet-purchase input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 16px;
+}
+
+.wallet-linking button, .wallet-purchase button {
+    background-color: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.wallet-linking button:hover, .wallet-purchase button:hover {
+    background-color: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.transaction-result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+}
+
+.transaction-result h2 {
+    color: #00cc7a;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.transaction-result p {
+    font-size: 18px;
+    color: #ddd;
+}

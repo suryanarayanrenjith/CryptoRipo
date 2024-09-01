@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoRipo Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="menu-icon" id="menuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search for Assets..." />
+            </div>
+            <div class="profile">
+                <img src="/assets/pic.png" alt="Profile Picture">
+                <div class="profile-menu">
+                    <a href="#" onclick="showSection('assets')">Your Assets</a>
+                    <a href="#" onclick="showSection('arts')">Your Arts</a>
+                    <a href="#" onclick="showSection('projects')">Your Projects</a>
+                    <a href="#" onclick="showSection('myProfile')">My Profile</a>
+                    <a href="#" onclick="showSection('settings')">Settings</a>
+                    <a href="#" onclick="logout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="sideMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="cryptoWallet">Crypto Wallet</a></li>
+            <li><a href="#">Asset Trade</a></li>
+            <li><a href="#">UCE</a></li>
+            <li><a href="CCM">CCM</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="dashboard" id="dashboardContent">
+            <h1>Welcome to CryptoRipo Dashboard</h1>
+            <div class="code-list">
+                <div class="code-item">
+                    <h2>Project Alpha</h2>
+                    <p>Made by: Rushit.</p>
+                    <button class="buy-now" onclick="location.href='BuyNow/index.html?name=Project+Alpha&description=Brief+description+of+Project+Alpha&price=30.5&currency=YOM'">Buy Now</button>
+                </div>
+                <div class="code-item">
+                    <h2>Project Beta</h2>
+                    <p>Made by: Stfatgxfhh.</p>
+                    <button class="buy-now" onclick="location.href='BuyNow/index.html?name=Project+Beta&description=Brief+description+of+Project+Beta&price=51.2&currency=YOM'">Buy Now</button>
+                </div>
+                <div class="code-item">
+                    <h2>Project Gamma</h2>
+                    <p>Made by: Suryanarayan.</p>
+                    <button class="buy-now" onclick="location.href='BuyNow/index.html?name=Project+Gamma&description=Brief+description+of+Project+Gamma&price=82.0&currency=YOM'">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-content" id="assets" style="display: none;">
+            <h1>Your Assets</h1>
+            <p>This section displays your assets.</p>
+        </section>
+
+        <section class="profile-content" id="arts" style="display: none;">
+            <h1>Your Arts</h1>
+            <p>This section displays your arts.</p>
+        </section>
+
+        <section class="profile-content" id="projects" style="display: none;">
+            <h1>Your Projects</h1>
+            <p>This section displays your projects.</p>
+        </section>
+
+        <section class="profile-content" id="myProfile" style="display: none;">
+            <h1>My Profile</h1>
+        
+            <div class="profile-details">
+                <p><strong>Username:</strong> JohnDoe</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <p><strong>Member Since:</strong> January 1, 2023</p>
+            </div>
+        
+            <div class="edit-info">
+                <h2>Edit Personal Information</h2>
+                <button onclick="editPersonalInfo()">Edit Info</button>
+            </div>
+        
+            <div class="profile-actions">
+                <h2>Security Settings</h2>
+                <button onclick="changePassword()">Change Password</button>
+                <button onclick="enable2FA()">Enable 2FA</button>
+                <button onclick="viewLoginActivity()">View Login Activity</button>
+            </div>
+        
+            <div class="account-management">
+                <h2>Account Management</h2>
+                <button onclick="logout()" style="width: 14%; text-decoration: none; color: inherit;">Logout</button>
+                <button onclick="deleteAccount()" style="background-color: #ff4c4c; width: 10%;">Delete Account</button>
+            </div>
+        </section>
+        
+        <section class="profile-content" id="settings" style="display: none;">
+            <h1>Settings</h1>
+
+            <div class="theme-settings">
+                <h2>Theme</h2>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span id="themeLabel">Dark Mode</span>
+            </div>
+        </section>     
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.profile-content');
+            sections.forEach(section => {
+                section.style.display = section.id === sectionId ? 'block' : 'none';
+            });
+
+            const dashboardContent = document.getElementById('dashboardContent');
+            if (dashboardContent) {
+                dashboardContent.style.display = 'none';
+            }
+        }
+
+        function logout() {
+            fetch('logout.php', {
+                method: 'GET',
+                credentials: 'same-origin'
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = '/';
+                } else {
+                    alert('Logout failed. Please try again.');
+                }
+            }).catch(error => {
+                console.error('Error during logout:', error);
+                alert('An error occurred. Please try again.');
+            });
+        }
+    </script>
+</body>
+
+</html>

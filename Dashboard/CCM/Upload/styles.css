@@ -1,0 +1,129 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #181818;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.upload-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.upload-container {
+    background-color: #242424;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.upload-container h2 {
+    font-size: 1.8rem;
+    color: #00ff99;
+    margin-bottom: 20px;
+}
+
+.drop-zone {
+    background-color: #1b1b1b;
+    padding: 50px;
+    border: 2px dashed #00ff99;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.drop-zone p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.upload-btn {
+    background-color: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.upload-btn:hover {
+    background-color: #00cc7a;
+    transform: translateY(-5px);
+}
+
+.file-name {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.nav-bar {
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar ul li {
+    float: left;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #575757;
+}
+
+@media (max-width: 768px) {
+    .upload-container {
+        padding: 30px;
+    }
+
+    .upload-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .drop-zone {
+        padding: 30px;
+    }
+}

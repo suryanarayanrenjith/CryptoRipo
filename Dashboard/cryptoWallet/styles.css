@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #202020;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+main {
+    padding: 20px;
+}
+
+.profile-content h1 {
+    color: #00ff99;
+}
+
+.wallet-balance, .wallet-linking, .wallet-purchase {
+    margin-bottom: 30px;
+}
+
+.wallet-balance h2, .wallet-linking h2, .wallet-purchase h2 {
+    color: #00cc7a;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.wallet-balance ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.wallet-balance ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.wallet-linking form, .wallet-purchase form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wallet-linking label, .wallet-purchase label {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.wallet-linking select, .wallet-linking input,
+.wallet-purchase select, .wallet-purchase input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 16px;
+}
+
+.wallet-linking button, .wallet-purchase button {
+    background-color: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.wallet-linking button:hover, .wallet-purchase button:hover {
+    background-color: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.transaction-result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #202020;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+}
+
+.transaction-result h2 {
+    color: #00cc7a;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.transaction-result p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+#privateKey {
+    margin-top: 10px;
+    width: 98% !important;
+}

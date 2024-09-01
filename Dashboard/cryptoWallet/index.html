@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet - CryptRepo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section class="profile-content" id="cryptoWalletContent">
+            <h1>Crypto Wallet</h1>
+
+            <div class="wallet-balance">
+                <h2>Your Available Balance</h2>
+                <ul>
+                    <li><strong>Bitcoin (BTC):</strong> 0.0 BTC</li>
+                    <li><strong>Ethereum (ETH):</strong> 0.0 ETH</li>
+                    <li><strong>Diamante (DIA):</strong> <span id="diaBalance">0</span> DIA</li>
+                    <li><strong>YoMo M (YOM):</strong> 0 YOM</li>
+                </ul>
+            </div>
+
+            <div class="wallet-linking">
+                <h2>Link a Wallet</h2>
+                <form id="linkWalletForm">
+                    <label for="walletType">Select Wallet Type:</label>
+                    <select id="walletType">
+                        <option value="metamask">MetaMask</option>
+                        <option value="trustwallet">Trust Wallet</option>
+                        <option value="coinbase">Coinbase Wallet</option>
+                        <option value="ledger">Ledger</option>
+                        <option value="trezor">Trezor</option>
+                    </select>
+
+                    <label for="walletAddress">Enter Wallet Address:</label>
+                    <input type="text" id="walletAddress" placeholder="Enter wallet address" required>
+
+                    <button type="submit">Link Wallet</button>
+                </form>
+            </div>
+
+            <div class="wallet-purchase">
+                <h2>Buy Cryptocurrency</h2>
+                <form id="buyCryptoForm">
+                    <label for="cryptoType">Select Cryptocurrency:</label>
+                    <select id="cryptoType">
+                        <option value="btc">Bitcoin (BTC)</option>
+                        <option value="eth">Ethereum (ETH)</option>
+                        <option value="dia">Diamante (DIA)</option>
+                        <option value="yom">YoMo M (YOM)</option>
+                    </select>
+
+                    <div id="privateKeyField" style="display: none;">
+                        <label for="privateKey">Enter Private Key:</label>
+                        <input type="text" id="privateKey" placeholder="Enter private key for DIA">
+                    </div>
+
+                    <label for="cryptoAmount">Amount:</label>
+                    <input type="number" id="cryptoAmount" placeholder="Enter amount" min="0" step="any" required>
+
+                    <button type="submit">Buy Now</button>
+                </form>
+            </div>
+
+            <div id="transactionResult" class="transaction-result">
+                <h2>Transaction Result</h2>
+                <p id="transactionMessage"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="wallet.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Project - Code-Chain Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="/Dashboard/">Home</a></li>
+            <li><a href="/Dashboard/cryptoWallet/">Crypto Wallet</a></li>
+            <li><a href="/Dashboard/CCM/">CCM</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Upload Your Project</h1>
+    </header>
+
+    <main class="upload-main">
+        <section class="upload-container">
+            <h2>Drag & Drop Your Project Here</h2>
+            <div id="dropZone" class="drop-zone">
+                <p>Drag and drop your ZIP file here, or</p>
+                <button id="fileSelectButton" class="upload-btn">Choose File</button>
+                <input type="file" id="fileInput" accept=".zip" hidden>
+            </div>
+            <p id="fileName" class="file-name"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
