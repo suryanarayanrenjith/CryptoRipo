@@ -57,6 +57,11 @@ CryptoRipo is a static web project. To get started, simply follow these steps:
 
 ## Usage
 
+### Use the sample login credentials
+
+Email: stfatgxfhh@gmail.com
+Password: test@123
+
 ### Uploading a Project
 
 1. Open `index.html` in your browser.
