@@ -11,6 +11,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="manifest" href="/assets/site.webmanifest">
     <script defer src="matrix.js"></script>
+    <style>
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,6 +31,7 @@
                 <?php if (isset($_SESSION['error'])): ?>
                     <p class="error-message"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
                 <?php endif; ?>
+                <p id="extensionError" class="error-message">Diamante extension is required to sign in. Please install it.</p>
             </div>
             <form id="sign-in-form" method="POST" action="sign_in.php">
                 <label for="email">Email:</label>
@@ -33,7 +42,7 @@
 
                 <div class="actions">
                     <a href="#" class="forgot-password">Forgot Password?</a>
-                    <button type="submit" class="sign-in-button">Sign In</button>
+                    <button type="submit" class="sign-in-button" id="signInButton">Sign In</button>
                 </div>
             </form>
 
@@ -42,6 +51,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        
+        function checkDiamanteExtension() {
+            return !!window.diam; 
+        }
+
+        
+        const signInForm = document.getElementById('sign-in-form');
+        const signInButton = document.getElementById('signInButton');
+        const errorMessage = document.getElementById('extensionError');
+
+       
+        signInForm.addEventListener('submit', function(event) {
+            
+            if (!checkDiamanteExtension()) {
+                event.preventDefault(); 
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
